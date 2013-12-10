@@ -1,0 +1,5 @@
+<ol>
+<%@artists.each do |artist_object|%>
+	<li><a href="/artists/<%=artist_object.name.gsub(" ", "_")%>"><%=artist_object.name%></a></li>
+<% end %>
+</ol>

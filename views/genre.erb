@@ -1,0 +1,11 @@
+
+<h1><%=@genre.capitalize%></h1>
+
+
+<h3><%=@genre_obj.artists.size%> Artists</h3>
+
+<ol>
+<% @genre_artists.each do |artist_obj| %>
+		<li><a href=""><%=artist_obj.name%></a></li>
+<% end %>
+</ol>
