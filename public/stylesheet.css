@@ -1,23 +1,69 @@
 
+
+.list {
+	display: inline-block;
+	margin-left: 40%;
+	padding: 20px;
+	width: 400px;
+}
+
+ol {
+	margin-left: 20%
+}
+
+h1, h2, h3 {
+	text-align: center
+}
+
+
 body {
 	font-family: 'Amatic SC', cursive;
 	font-size: 32px;
 	color: white;
-	background-color: black;
+	background: url(/img/escheresque_ste.png) repeat;
 }
 
-.home_button {
+.button {
+	display: inline-block;
+	width: 225px;
+	margin: 0 auto;
+	text-align:center;
+	
+	padding: 15px;
+	border-radius: 30%;
 	text-decoration: none;
-	height: 80px;
 	color: white;
+	font-size: 40px;
+	background-color: rgba(37,37,37, 0.4);
+}
+
+.btn_container {
+	width: 700px;
+	display: block;
+	margin: 0 auto;
+}
+
+.btn_container > .button {
 	font-size: 60px;
-	background-color: black
+	width: 300px;
+	height: 80px;
 }
 
 .container {
-	display: inline-block;
+	width: 800px;
+	display: block;
 	position: relative;
-	margin: auto;
+	margin:0 auto;
+	padding-top: 25px;
+}
+
+.container > h1, h2, h3 {
+	margin-right: 15px;
+}
+
+.container > .button {
+	display: block;
+	margin: 0 auto;
 }
 
 a:link {
@@ -28,7 +74,7 @@ a:visited {
 	color: white;
 }
 a:hover {
-
+	text-decoration: underline;
 }
 a:active {
 

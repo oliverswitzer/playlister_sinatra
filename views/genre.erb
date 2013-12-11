@@ -1,11 +1,18 @@
 
-<h1><%=@genre.capitalize%></h1>
+
+<div class="button">
+	<a href="/home">Take me home</a>
+</div>
+
+<div class="container">
+	<h1><%=@genre.capitalize%></h1>
 
 
-<h3><%=@genre_obj.artists.size%> Artists</h3>
+	<h3><%=@genre_obj.artists.size%> Artists</h3>
 
-<ol>
-<% @genre_artists.each do |artist_obj| %>
-		<li><a href="/artists/<%=artist_obj.name.gsub(" ", "_")%>"><%=artist_obj.name%></a></li>
-<% end %>
-</ol>
+	<ol>
+	<% @genre_artists.each do |artist_obj| %>
+			<li><a href="/artists/<%=artist_obj.name.gsub(" ", "_")%>"><%=artist_obj.name%></a></li>
+	<% end %>
+	</ol>
+</div>

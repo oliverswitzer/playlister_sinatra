@@ -1,7 +1,17 @@
 
+<div class="button">
+	<a href="/home">Take me home</a>
+</div>
 
-<ol>
-<%@artists.each do |artist_object|%>
-	<li><a href="/artists/<%=artist_object.name.gsub(" ", "_")%>"><%=artist_object.name%></a></li>
-<% end %>
-</ol>
+<div class="container">
+	<div>
+		<h2>Artists</h2>
+		<ol>
+		<%@artists.each do |artist_object|%>
+			<li><a href="/artists/<%=artist_object.name.gsub(" ", "_")%>"><%=artist_object.name%></a></li>
+		<% end %>
+		</ol>
+	</div>
+
+	<class
+</div>

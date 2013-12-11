@@ -1,11 +1,20 @@
 
 
-<h1><%=@artist%> - <%=@song_count%> song(s)</h1>
+<div class="button">
+	<a href="/home">Take me home</a>
+</div>
 
-<h3>Songs</h3>
+<div class="container">
+	<h1><%=@artist%> - <%=@song_count%> song(s)</h1>
+	<h3>Songs</h3>
+	<ol>
+		<% @artist_obj.songs.each do |song_obj| %>
+			<li><%=song_obj.name%>  -  <a href="/genres/<%=song_obj.genre.name%>"><%=song_obj.genre.name.capitalize%></a></li>
+		<% end %>
+	</ol>
 
-<ol>
-	<% @artist_obj.songs.each do |song_obj| %>
-		<li><%=song_obj.name%>  -  <a href="/genres/<%=song_obj.genre.name%>"><%=song_obj.genre.name.capitalize%></a></li>
-	<% end %>
-</ol>
+	<br>
+	<div class="button">
+		<a href="https://myspace.com/<%=@artist_obj.name.gsub("$","s").gsub(" ", "").downcase%>/music/songs" target="_blank">Gimme some tunes for <%=@artist_obj.name%></a>
+	</div>
+</div>

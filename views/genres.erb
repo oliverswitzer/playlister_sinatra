@@ -1,9 +1,15 @@
-<h1>Genres</h1>
 
-<ol>
-<%@genres.each do |genre_object|%>
+<div class="button">
+	<a href="/home">Take me home</a>
+</div>
 
-	<li><a href="/genres/<%=genre_object.name%>"><%=genre_object.name.capitalize%></a></li>
+<div class="container">
+	<h1>Genres</h1>
+	<ol>
+	<%@genres.each do |genre_object|%>
 
-<% end %>
-</ol>
+		<li><a href="/genres/<%=genre_object.name%>"><%=genre_object.name.capitalize%></a></li>
+
+	<% end %>
+	</ol>
+</div>
