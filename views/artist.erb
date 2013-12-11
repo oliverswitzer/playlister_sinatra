@@ -4,10 +4,8 @@
 
 <h3>Songs</h3>
 
-<% @artist_obj.songs.each do |song_obj| %>
-
 <ol>
-	<li><%=song_obj.name%>  -  <a href="/genres/<%=song_obj.genre.name%>"><%=song_obj.genre.name.capitalize%></a></li>
+	<% @artist_obj.songs.each do |song_obj| %>
+		<li><%=song_obj.name%>  -  <a href="/genres/<%=song_obj.genre.name%>"><%=song_obj.genre.name.capitalize%></a></li>
+	<% end %>
 </ol>
-
-<% end %>
