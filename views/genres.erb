@@ -1,9 +1,9 @@
+<h1>Genres</h1>
 
-
+<ol>
 <%@genres.each do |genre_object|%>
 
-	<ul>
-		<li><a href="/genres/<%=genre_object.name%>"><%=genre_object.name%></a></li>
-	</ul>
+	<li><a href="/genres/<%=genre_object.name%>"><%=genre_object.name.capitalize%></a></li>
 
 <% end %>
+</ol>

@@ -7,7 +7,7 @@
 <% @artist_obj.songs.each do |song_obj| %>
 
 <ol>
-	<li><%=song_obj.name%></li>
+	<li><%=song_obj.name%>  -  <a href="/genres/<%=song_obj.genre.name%>"><%=song_obj.genre.name.capitalize%></a></li>
 </ol>
 
 <% end %>

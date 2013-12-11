@@ -6,6 +6,6 @@
 
 <ol>
 <% @genre_artists.each do |artist_obj| %>
-		<li><a href=""><%=artist_obj.name%></a></li>
+		<li><a href="/artists/<%=artist_obj.name.gsub(" ", "_")%>"><%=artist_obj.name%></a></li>
 <% end %>
 </ol>
