@@ -8,7 +8,7 @@
 		<h2>Artists</h2>
 		<ol>
 		<%@artists.each do |artist_object|%>
-			<li><a href="/artists/<%=artist_object.name.gsub(" ", "_")%>"><%=artist_object.name%></a></li>
+			<li><a href="/artists/<%=artist_object.name.gsub(" ", "_")%>"><%=artist_object.name%></a> -- <%=artist_object.songs.size%> song(s)</li>
 		<% end %>
 		</ol>
 	</div>

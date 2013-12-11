@@ -5,14 +5,14 @@
 </div>
 
 <div class="container">
-	<h1><%=@genre.capitalize%></h1>
+	<h1>Genre: <%=@genre.capitalize%></h1>
 
 
 	<h3><%=@genre_obj.artists.size%> Artists</h3>
 
 	<ol>
 	<% @genre_artists.each do |artist_obj| %>
-			<li><a href="/artists/<%=artist_obj.name.gsub(" ", "_")%>"><%=artist_obj.name%></a></li>
+			<li><a href="/artists/<%=artist_obj.name.gsub(" ", "_")%>"><%=artist_obj.name%></a> -- <%=artist_obj.songs.size%> song(s)</li>
 	<% end %>
 	</ol>
 </div>

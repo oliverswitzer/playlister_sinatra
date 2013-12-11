@@ -20,13 +20,13 @@ body {
 	font-family: 'Amatic SC', cursive;
 	font-size: 32px;
 	color: white;
-	background: url(/img/escheresque_ste.png) repeat;
+	background: url(/img/Chalkboard-background.jpg) repeat;
 }
 
 .button {
 	display: inline-block;
 	width: 225px;
-	margin: 0 auto;
+	margin: 10px;
 	text-align:center;
 	
 	padding: 15px;
@@ -54,7 +54,7 @@ body {
 	display: block;
 	position: relative;
 	margin:0 auto;
-	padding-top: 25px;
+	padding-top: 5px;
 }
 
 .container > h1, h2, h3 {
