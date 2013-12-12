@@ -1,5 +1,6 @@
 require 'bundler'
 require 'open-uri'
+require 'nokogiri'
 require './lib/artist'
 require './lib/genre'
 require './lib/song'
