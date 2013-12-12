@@ -5,7 +5,6 @@ require './lib/artist'
 require './lib/genre'
 require './lib/song'
 require './lib/parser'
-require 'debugger'
 Bundler.require
 
 class App < Sinatra::Application
