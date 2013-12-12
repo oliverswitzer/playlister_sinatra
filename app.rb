@@ -35,10 +35,10 @@ class App < Sinatra::Application
 
   get '/artists/:name' do
     @artist = params[:name]
-    @download = open("http://ws.spotify.com/search/1/artist?q=#{@artist}").read
-    @html = Nokogiri::XML(@download)
-    @artist_url = @html.search("artist")[0]["href"]
-    @embed_url = "https://embed.spotify.com/?uri=#{@artist_url}"
+    # @download = open("http://ws.spotify.com/search/1/artist?q=#{@artist}").read
+    # @html = Nokogiri::XML(@download)
+    # @artist_url = @html.search("artist")[0]["href"]
+    # @embed_url = "https://embed.spotify.com/?uri=#{@artist_url}"
 
 
     @artist.gsub!("_", " ")
