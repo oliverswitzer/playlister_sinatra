@@ -1,4 +1,6 @@
 require 'bundler'
+require 'open-uri'
+require 'nokogiri'
 require './lib/artist'
 require './lib/genre'
 require './lib/song'
@@ -33,6 +35,12 @@ class App < Sinatra::Application
 
   get '/artists/:name' do
     @artist = params[:name]
+    @download = open("http://ws.spotify.com/search/1/artist?q=#{@artist}").read
+    @html = Nokogiri::XML(@download)
+    @artist_url = @html.search("artist")[0]["href"]
+    @embed_url = "https://embed.spotify.com/?uri=#{@artist_url}"
+
+
     @artist.gsub!("_", " ")
     @artist_obj = ::Artist.search_all(@artist)
 

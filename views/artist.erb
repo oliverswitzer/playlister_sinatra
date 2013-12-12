@@ -17,4 +17,6 @@
 	<div class="button">
 		<a href="https://myspace.com/<%=@artist_obj.name.gsub("$","s").gsub(" ", "").downcase%>/music/songs" target="_blank">Gimme some tunes for <%=@artist_obj.name%></a>
 	</div>
+
+	<iframe src="<%=@embed_url%>" frameborder="0" allowtransparency="true" width="556" height="636"></iframe>
 </div>
