@@ -5,7 +5,7 @@ require './lib/artist'
 require './lib/genre'
 require './lib/song'
 require './lib/parser'
-
+require 'debugger'
 Bundler.require
 
 class App < Sinatra::Application
@@ -32,13 +32,17 @@ class App < Sinatra::Application
   end
 
   get '/artists' do
-        puts "im about to run the parser"
-    @parser = Parser.new
-    @parser.parse
-    puts "i just parsed the data"
-    @artists = @parser.artists
-    @genres = @parser.genres
-    @songs = @parser.songs
+    puts @artists.count
+    # debugger
+    #     puts "im about to run the parser"
+    # @parser = Parser.new
+    # @parser.parse
+    # puts "i just parsed the data"
+    # @artists = @parser.artists
+    # @genres = @parser.genres
+    # puts @artists.count
+    # debugger
+    # @songs = @parser.songs
     erb :artists
   end
 

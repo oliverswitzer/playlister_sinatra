@@ -18,6 +18,7 @@ class Parser
   end
 
   def collect_songs   #return an array of mp3 filenames in directory specified in @directory variable
+    puts directory
     Dir.entries(directory).select {|f| !File.directory? f}
   end
 
@@ -42,7 +43,9 @@ class Parser
   end
 
   def parse
-    mp3_files.each do |mp3|
+    puts 'im parsing'
+    mp3_files.each_with_index do |mp3, index|
+      puts "im parsing file #{index}"
       m_artist = match_artist(mp3)
       m_song = match_song(mp3)
       m_genre = match_genre(mp3)
