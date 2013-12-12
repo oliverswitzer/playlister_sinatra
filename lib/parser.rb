@@ -45,7 +45,6 @@ class Parser
   def parse
     puts 'im parsing'
     mp3_files.each_with_index do |mp3, index|
-      puts "im parsing file #{index}"
       m_artist = match_artist(mp3)
       m_song = match_song(mp3)
       m_genre = match_genre(mp3)

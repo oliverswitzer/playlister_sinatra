@@ -6,9 +6,9 @@
 <div class="container">
 	<div>
 		<h2>Artists</h2>
-		<h1>artists empty? <%= @artists.empty? %></h1>
-		<h1>artists nil? <%= @artists.nil? %></h1>
-		<h1>number of artists <%= @artists.count %></h1>
+		<h1>artists empty? <%= @@artists.empty? %></h1>
+		<h1>artists nil? <%= @@artists.nil? %></h1>
+		<h1>number of artists <%= @@artists.count %></h1>
 		<ol>
 
 		<%@artists.each do |artist_object|%>

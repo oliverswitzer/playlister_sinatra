@@ -10,11 +10,11 @@ Bundler.require
 class App < Sinatra::Application
 
   before do
-    @parser = Parser.new
-    @parser.parse
-    @artists = @parser.artists
-    @genres = @parser.genres
-    @songs = @parser.songs
+    @@parser = Parser.new
+    @@parser.parse
+    @@artists = @@parser.artists
+    @@genres = @@parser.genres
+    @@songs = @@parser.songs
   end
 
   get '/home' do
