@@ -32,6 +32,13 @@ class App < Sinatra::Application
   end
 
   get '/artists' do
+        puts "im about to run the parser"
+    @parser = Parser.new
+    @parser.parse
+    puts "i just parsed the data"
+    @artists = @parser.artists
+    @genres = @parser.genres
+    @songs = @parser.songs
     erb :artists
   end
 
