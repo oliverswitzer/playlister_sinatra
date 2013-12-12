@@ -10,10 +10,8 @@ Bundler.require
 class App < Sinatra::Application
 
   before do
-    puts "im about to run the parser"
     @parser = Parser.new
     @parser.parse
-    puts "i just parsed the data"
     @artists = @parser.artists
     @genres = @parser.genres
     @songs = @parser.songs
@@ -32,16 +30,6 @@ class App < Sinatra::Application
 
   get '/artists' do
     puts @artists.count
-    # debugger
-    #     puts "im about to run the parser"
-    # @parser = Parser.new
-    # @parser.parse
-    # puts "i just parsed the data"
-    # @artists = @parser.artists
-    # @genres = @parser.genres
-    # puts @artists.count
-    # debugger
-    # @songs = @parser.songs
     erb :artists
   end
 
