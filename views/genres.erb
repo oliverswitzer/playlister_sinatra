@@ -6,7 +6,7 @@
 <div class="container">
 	<h1>Genres</h1>
 	<ol>
-	<% @parser.genres.each do |genre_object|%>
+	<% @genres.each do |genre_object|%>
 
 		<li><a href="/genres/<%=genre_object.name%>"><%=genre_object.name.capitalize%></a></li>
 

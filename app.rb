@@ -9,10 +9,8 @@ Bundler.require
 
 class App < Sinatra::Application
 
-  before do
-    @parser = Parser.new
-    @parser.parse
-  end
+  @@parser = Parser.new
+  @@parser.parse
 
   get '/home' do
 
@@ -20,14 +18,14 @@ class App < Sinatra::Application
   end
 
   get '/genres' do
-    @genres = @parser.genres
-    @songs = @parser.songs
+    @genres = @@parser.genres
+    @songs = @@parser.songs
     erb :genres
   end
 
   get '/artists' do
-    @artists = @parser.artists
-    @songs = @parser.songs
+    @artists = @@parser.artists
+    @songs = @@parser.songs
     erb :artists
   end
 
