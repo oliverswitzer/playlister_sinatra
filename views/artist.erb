@@ -14,9 +14,11 @@
 	</ol>
 
 	<br>
-	<div class="button">
+	<!-- <div class="button">
 		<a href="https://myspace.com/<%=@artist_obj.name.gsub("$","s").gsub(" ", "").downcase%>/music/songs" target="_blank">Gimme some tunes for <%=@artist_obj.name%></a>
-	</div>
+	</div> -->
 
-	<iframe src="<%=@embed_url%>" frameborder="0" allowtransparency="true" width="556" height="636"></iframe>
-</div>
+	<h3> More tunes from <%=@artist_obj.name%> on Spotify: </h3>
+
+	
+	<iframe style="display:block; margin: 0 auto" src="<%=@embed_url%>" frameborder="0" allowtransparency="true" width="556" height="636"></iframe>
